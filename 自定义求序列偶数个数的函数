@@ -1,0 +1,11 @@
+#用eval（input（））生成一个列表
+#自定义一个su函数
+def su(x):
+    ans=0
+    for i in x:
+        if i%2==0:
+            ans+=1
+    return ans
+
+res=su(eval(input('请输入列表lst:')))
+print(res)
