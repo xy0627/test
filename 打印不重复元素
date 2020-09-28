@@ -1,0 +1,10 @@
+编写一个列表处理程序，使用input（）函数接收一个列表，打印输出列表中所有不重复的元素；
+#用append的方式把原列表中的元素添加到一个新列表，确保新列表里不存在重复的元素
+#用eval（input（））生成一个列表
+lst= eval(input('请输入列表lst:'))
+
+list2 =[]
+for item in lst:
+    if (item not in list2):
+        list2.append(item)
+print(list2)
