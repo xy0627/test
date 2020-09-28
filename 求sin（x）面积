@@ -1,0 +1,19 @@
+:求y=sin(x)从0到2*pi，与x轴围成的面积
+#列表推导式area = [abs(math.sin(i*width))*width for i in range(n)]
+#由积分算出sin（x）的面积为4
+#把sin（x）切割成无数的小长方形，小长方形的面积总和约等于sin（x）的面积
+
+
+import math
+n = int(input('输入：'))#理论上，n越大，面积越接近4
+width = 2*math.pi/n
+#a为宽，b为高
+a = []
+b = []
+
+for i in range(n):
+    a.append(i*width)
+for i in a:
+    b.append(abs(math.sin(i)))
+    area = sum(b)*width
+print(area)
