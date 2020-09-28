@@ -1,0 +1,16 @@
+冒泡排序
+对序列[1,2,6,0.3,2,0.5,-1,2.4]按从小到大顺序进行排列。
+#冒泡排序Bubble_sort()
+list3 =[1,2,6,0.3,2,0.5,-1,2.4]
+def Bubble_sort(list3):
+    n= len(list3)
+    
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if list3[j] > list3[j+1]:
+                list3[j],list3[j+1]=list3[j+1],list3[j]
+                
+Bubble_sort(list3)
+print ("排序后的数组:")
+for i in range(len(list3)):
+    print("%a" %list3[i])# %a(%A)     浮点数、十六进制数字和p-(P-)记数法(C99) 
