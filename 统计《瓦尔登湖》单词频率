@@ -1,0 +1,21 @@
+Walden中文译名《瓦尔登湖》，是美国作家梭罗独居瓦尔登湖畔的记录，描绘了他两年多时间里的所见、所闻和所思。该书崇尚简朴生活，热爱大自然的风光，内容丰厚，意义深远，语言生动。请用Python统计小说Walden中各单词出现的频次，并按频次由高到低排序。
+import re
+with open('Walden.txt') as file:
+    #1.1.读取txt文本文件内容
+    file_txt=file.read()
+    #2.文本预处理，去掉英文符号
+    word_text=re.sub(r'[?.!,;""/\[\]]',' ',file_txt) #特殊字符替换成空格
+    word_texts=re.sub(r"-",' ',word_text) #替换单独的-，不是同一单词里的连字符
+    #3.分割获得单词列表
+    wordlist=word_texts.split()
+    #4.获得单词频次字典
+    word_dict={}
+    for word in wordlist:
+        if word not in word_dict:
+            word_dict[word]=1
+        else:
+            word_dict[word]=word_dict.get(word)+1
+    #5.对字典进行排序
+    dict_order=dict(sorted(word_dict.items(),key=lambda x:x[1],reverse=True))#reverse为True，降序
+    print(list(dict_order.items())[:])
+
