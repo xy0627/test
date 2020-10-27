@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 # coding: utf-8
 
 # In[6]:
@@ -10,7 +10,7 @@ top = tkinter.Tk()
 top.mainloop()
 
 
-# In[1]:
+# In[7]:
 
 
 from tkinter import *
@@ -48,16 +48,4 @@ btnCheck.place(x=200,y=150,width=45,height=28)#输入button的位置
 
  
 root.mainloop();
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
